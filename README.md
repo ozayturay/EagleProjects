@@ -1,2 +1,2 @@
 # EagleProjects
-Eagle Projects by ozayturay a.k.a Simon/CGTr
+Eagle Projects by Özay Turay a.k.a Simon/CGTr
