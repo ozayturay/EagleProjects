@@ -1,0 +1,3 @@
+#ifndef FLASH_LIB
+#define FLASH_LIB
+#include <avr/pgmspace.h>

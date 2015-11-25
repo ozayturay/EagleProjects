@@ -1,0 +1,173 @@
+
+
+CURRENT		= $02
+DATA_LOW	= $03
+DATA_HIGH 	= $04
+DATA_LENGTH	= $05
+RESERVED	= $06
+ACTUAL_LOW	= $07
+ACTUAL_HIGH	= $08
+
+BITTARGET	= $64
+CHROUT    = $FFD2
+BORDER    = $D020
+SCREEN    = $D021
+TEXT	  = $0286
+NMI_LO	  = $0318
+NMI_HI	  = $0319
+
+	*=$8000
+START	
+	.BYTE	$09, $80			; Cartridge cold-start vector = $8009
+	.BYTE	$25, $80			; Cartridge warm-start vector = $8025
+	.BYTE	$C3, $C2, $CD, $38, $30		; CBM8O - Autostart key
+	
+;	KERNAL RESET ROUTINE
+	STX $D016				; Turn on VIC for PAL / NTSC check
+	JSR $FDA3				; IOINIT - Init CIA chips
+	JSR $FD50				; RANTAM - Clear/test system RAM
+	JSR $FD15				; RESTOR - Init KERNAL RAM vectors
+	JSR $FF5B				; CINT   - Init VIC and screen editor
+	CLI					; Re-enable IRQ interrupts	
+
+;	BASIC RESET  Routine
+
+	JSR $E453				; Init BASIC RAM vectors
+	JSR $E3BF				; Main BASIC RAM Init routine
+	JSR $E422				; Power-up message / NEW command
+	LDX #$FB
+	TXS					; Reduce stack pointer for BASIC
+	
+    	LDA #00					; Change border colour to
+   	STA BORDER				; Pink
+   	LDA #147				; PRINT CHR$(147) 
+    	JSR CHROUT				; to clear Screen			
+	
+        LDY #$7f    				; $7f = %01111111 
+        STY $dc0d   				; Turn off CIAs Timer interrupts 
+        STY $dd0d  				; Turn off CIAs Timer interrupts 
+        LDA $dc0d  				; cancel all CIA-IRQs in queue/unprocessed 
+        LDA $dd0d   				; cancel all CIA-IRQs in queue/unprocessed 
+	
+				
+	LDA #$0B				;%00001011 ; Disable VIC display until the end of transfer
+	STA $D011
+	
+	LDA #$37
+	STA $01					; Do not Disable kernal & basic rom
+	
+	
+; 	Change interrupt routines
+	ASL $D019
+	LDA #$00
+	STA $D01A
+		
+	LDA #<STARTNMI
+	STA NMI_LO
+	LDA #>STARTNMI
+	STA NMI_HI		
+	
+    	LDA #01					
+   	STA BORDER
+   			
+	CLI	
+	LDY #$00	
+	CLV	
+	STY BITTARGET
+WAIT
+	BIT BITTARGET	
+	BVC WAIT	
+	CLV
+	
+    	LDA #02					
+   	STA BORDER
+	
+	LDA #$37				;Restore default memory layout
+	STA $01	
+	
+	LDA #$1B				;%00011011 ; Enable VIC again
+	STA $D011
+	
+	LDA #$81				;%10000001 ; Enable CIA interrupts
+	STA $DC0D	
+	LDA DATA_LOW
+	CMP #$01
+	BNE MACHINELANG
+	LDA DATA_HIGH
+	CMP #$08
+	BNE MACHINELANG
+	
+    	LDA #03					
+   	STA BORDER
+	
+	JSR $A659 ;"CLR" 	
+ 	JMP $A7AE ;"RUN" 
+ 	
+MACHINELANG 
+    	LDA #04					
+   	STA BORDER	
+	JMP (DATA_LOW) 				; Leave control to loaded stuff 	
+	
+; 	Actual transfer routine	
+	
+; Below code is used as a template. Code will be duplicated 256 times.
+; Only change will be in the lines  LDA #$00
+; First block in the eprom will contain LDA #$00, next one LDA #$01 and LDA #$02, LDA #$03.. so on.. 
+
+STARTNMI
+    	LDA #07					
+   	STA BORDER
+; Only initial meta 4 bytes will be transferred with this routine
+P1
+	LDA #$EA				; #$EA is a template variable
+	STA DATA_LOW,Y
+	STA ACTUAL_LOW,Y
+	INY
+	CPY #$04
+	BNE OUT
+	LDA #<NMI
+	STA NMI_LO
+	LDY #$00
+	LDX DATA_LENGTH	
+    	LDA #08					
+   	STA BORDER
+	
+OUT	
+	RTI
+
+NMI	; Usual : 7 + 2 + 6 + 2 + 5 = 18 cycles per byte + 7 cycle overhead from Kernal
+    	INC BORDER
+P2
+	LDA #$EA				; #$EA is a template variable	
+	STA (ACTUAL_LOW), Y
+	INY
+	BEQ BLOCKEND	
+	RTI
+	
+BLOCKEND
+	INC ACTUAL_HIGH				; Next 256 bytes
+	DEX					; Decrement data length (set in STARTNMI)
+	BEQ OUTBLOCK				; If all pages  transferred exit foreground loop
+	RTI
+OUTBLOCK	
+	LDA #$64
+	STA BITTARGET				; BIT on $64 will set overflow flag. We can't use
+						; self modifying code since this code is in rom.
+	RTI		
+	
+	
+
+		
+
+;CHARARRAY
+;	.BYTE 48, 49, 50, 51, 52, 53, 54, 55, 56, 57,  1, 2, 3, 4, 5, 6
+	
+	*=$80FF
+	NOP	
+; Performance summary 
+; 44kb file is 176 blocks (4 * STARTNMI is insignificant)
+; =~ 45056 NMI + 176 IRQ
+; 45056 * (20 + 5) + 176 * 30 = 1.126.400 + 1.280 = 1.131.680 which translates to 1.15 seconds on a pal machine.
+
+PLACEHOLDER1 = (P1 + 1) - START
+PLACEHOLDER2 = (P2 + 1) - START
