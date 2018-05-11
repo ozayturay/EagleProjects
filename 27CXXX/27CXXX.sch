@@ -458,7 +458,7 @@
 <pad name="39" x="-21.59" y="7.62" drill="0.8128" diameter="1.6256" shape="octagon" rot="R90"/>
 <pad name="40" x="-24.13" y="7.62" drill="0.8128" diameter="1.6256" shape="octagon" rot="R90"/>
 </package>
-<package name="DIP42W">
+<package name="DIP42">
 <description>42pin Dual In Line Package Wide (0.6 inch)</description>
 <wire x1="-26.67" y1="1.27" x2="-26.67" y2="-1.27" width="0.1524" layer="21" curve="-180"/>
 <wire x1="26.67" y1="-6.35" x2="26.67" y2="6.35" width="0.1524" layer="21"/>
@@ -510,6 +510,118 @@
 <pad name="40" x="-20.32" y="7.62" drill="0.8128" diameter="1.6256" shape="octagon" rot="R90"/>
 <pad name="41" x="-22.86" y="7.62" drill="0.8128" diameter="1.6256" shape="octagon" rot="R90"/>
 <pad name="42" x="-25.4" y="7.62" drill="0.8128" diameter="1.6256" shape="octagon" rot="R90"/>
+</package>
+<package name="ZIF42F">
+<description>42pin Zero Insertion Force Package (Made from 48pin for easy replace)</description>
+<wire x1="-44.45" y1="1.27" x2="-44.45" y2="-1.27" width="0.1524" layer="21" curve="-180"/>
+<wire x1="31.75" y1="-6.35" x2="31.75" y2="6.35" width="0.1524" layer="21"/>
+<wire x1="-44.45" y1="6.35" x2="-44.45" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-44.45" y1="6.35" x2="31.75" y2="6.35" width="0.1524" layer="21"/>
+<wire x1="31.75" y1="-6.35" x2="-44.45" y2="-6.35" width="0.1524" layer="21"/>
+<wire x1="-44.45" y1="-1.27" x2="-44.45" y2="-6.35" width="0.1524" layer="21"/>
+<pad name="1" x="-25.4" y="-7.62" drill="1.397" diameter="2.032" shape="square" rot="R90" first="yes"/>
+<pad name="2" x="-22.86" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="3" x="-20.32" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="4" x="-17.78" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="5" x="-15.24" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="6" x="-12.7" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="7" x="-10.16" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="8" x="-7.62" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="9" x="-5.08" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="10" x="-2.54" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="11" x="0" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="12" x="2.54" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="13" x="5.08" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="14" x="7.62" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<text x="-45.339" y="0" size="1.016" layer="25" font="vector" ratio="15" rot="R90" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.016" layer="25" font="vector" ratio="15" align="center">&gt;VALUE</text>
+<pad name="15" x="10.16" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="16" x="12.7" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="17" x="15.24" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="18" x="17.78" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="19" x="20.32" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="20" x="22.86" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="21" x="25.4" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="22" x="25.4" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="23" x="22.86" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="24" x="20.32" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="25" x="17.78" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="26" x="15.24" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="27" x="12.7" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="28" x="10.16" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="29" x="7.62" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="30" x="5.08" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="31" x="2.54" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="32" x="0" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="33" x="-2.54" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="34" x="-5.08" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="35" x="-7.62" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="36" x="-10.16" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="37" x="-12.7" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="38" x="-15.24" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="39" x="-17.78" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="40" x="-20.32" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="41" x="-22.86" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="42" x="-25.4" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="F3" x="-27.94" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="F2" x="-30.48" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="F1" x="-33.02" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="F4" x="-27.94" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="F5" x="-30.48" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="F6" x="-33.02" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+</package>
+<package name="ZIF42">
+<description>42pin Zero Insertion Force Package</description>
+<wire x1="-36.83" y1="1.27" x2="-36.83" y2="-1.27" width="0.1524" layer="21" curve="-180"/>
+<wire x1="31.75" y1="-6.35" x2="31.75" y2="6.35" width="0.1524" layer="21"/>
+<wire x1="-36.83" y1="6.35" x2="-36.83" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-36.83" y1="6.35" x2="31.75" y2="6.35" width="0.1524" layer="21"/>
+<wire x1="31.75" y1="-6.35" x2="-36.83" y2="-6.35" width="0.1524" layer="21"/>
+<wire x1="-36.83" y1="-1.27" x2="-36.83" y2="-6.35" width="0.1524" layer="21"/>
+<pad name="1" x="-25.4" y="-7.62" drill="1.397" diameter="2.032" shape="square" rot="R90" first="yes"/>
+<pad name="2" x="-22.86" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="3" x="-20.32" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="4" x="-17.78" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="5" x="-15.24" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="6" x="-12.7" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="7" x="-10.16" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="8" x="-7.62" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="9" x="-5.08" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="10" x="-2.54" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="11" x="0" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="12" x="2.54" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="13" x="5.08" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="14" x="7.62" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<text x="-37.719" y="0" size="1.016" layer="25" font="vector" ratio="15" rot="R90" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.016" layer="25" font="vector" ratio="15" align="center">&gt;VALUE</text>
+<pad name="15" x="10.16" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="16" x="12.7" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="17" x="15.24" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="18" x="17.78" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="19" x="20.32" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="20" x="22.86" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="21" x="25.4" y="-7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="22" x="25.4" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="23" x="22.86" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="24" x="20.32" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="25" x="17.78" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="26" x="15.24" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="27" x="12.7" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="28" x="10.16" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="29" x="7.62" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="30" x="5.08" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="31" x="2.54" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="32" x="0" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="33" x="-2.54" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="34" x="-5.08" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="35" x="-7.62" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="36" x="-10.16" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="37" x="-12.7" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="38" x="-15.24" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="39" x="-17.78" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="40" x="-20.32" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="41" x="-22.86" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
+<pad name="42" x="-25.4" y="7.62" drill="1.397" diameter="2.032" shape="octagon" rot="R90"/>
 </package>
 </packages>
 <symbols>
@@ -676,7 +788,105 @@
 <gate name="G$1" symbol="27C160" x="0" y="0"/>
 </gates>
 <devices>
-<device name="_DIP" package="DIP42W">
+<device name="_DIP42" package="DIP42">
+<connects>
+<connect gate="G$1" pin="!CE" pad="11"/>
+<connect gate="G$1" pin="!OE" pad="13"/>
+<connect gate="G$1" pin="A0" pad="10"/>
+<connect gate="G$1" pin="A1" pad="9"/>
+<connect gate="G$1" pin="A10" pad="39"/>
+<connect gate="G$1" pin="A11" pad="38"/>
+<connect gate="G$1" pin="A12" pad="37"/>
+<connect gate="G$1" pin="A13" pad="36"/>
+<connect gate="G$1" pin="A14" pad="35"/>
+<connect gate="G$1" pin="A15" pad="34"/>
+<connect gate="G$1" pin="A16" pad="33"/>
+<connect gate="G$1" pin="A17" pad="2"/>
+<connect gate="G$1" pin="A18" pad="1"/>
+<connect gate="G$1" pin="A19" pad="42"/>
+<connect gate="G$1" pin="A2" pad="8"/>
+<connect gate="G$1" pin="A3" pad="7"/>
+<connect gate="G$1" pin="A4" pad="6"/>
+<connect gate="G$1" pin="A5" pad="5"/>
+<connect gate="G$1" pin="A6" pad="4"/>
+<connect gate="G$1" pin="A7" pad="3"/>
+<connect gate="G$1" pin="A8" pad="41"/>
+<connect gate="G$1" pin="A9" pad="40"/>
+<connect gate="G$1" pin="GND@1" pad="12"/>
+<connect gate="G$1" pin="GND@2" pad="31"/>
+<connect gate="G$1" pin="Q0" pad="14"/>
+<connect gate="G$1" pin="Q1" pad="16"/>
+<connect gate="G$1" pin="Q10" pad="19"/>
+<connect gate="G$1" pin="Q11" pad="21"/>
+<connect gate="G$1" pin="Q12" pad="24"/>
+<connect gate="G$1" pin="Q13" pad="26"/>
+<connect gate="G$1" pin="Q14" pad="28"/>
+<connect gate="G$1" pin="Q15" pad="30"/>
+<connect gate="G$1" pin="Q2" pad="18"/>
+<connect gate="G$1" pin="Q3" pad="20"/>
+<connect gate="G$1" pin="Q4" pad="23"/>
+<connect gate="G$1" pin="Q5" pad="25"/>
+<connect gate="G$1" pin="Q6" pad="27"/>
+<connect gate="G$1" pin="Q7" pad="29"/>
+<connect gate="G$1" pin="Q8" pad="15"/>
+<connect gate="G$1" pin="Q9" pad="17"/>
+<connect gate="G$1" pin="VCC" pad="22"/>
+<connect gate="G$1" pin="VPP" pad="32"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_ZIF42" package="ZIF42">
+<connects>
+<connect gate="G$1" pin="!CE" pad="11"/>
+<connect gate="G$1" pin="!OE" pad="13"/>
+<connect gate="G$1" pin="A0" pad="10"/>
+<connect gate="G$1" pin="A1" pad="9"/>
+<connect gate="G$1" pin="A10" pad="39"/>
+<connect gate="G$1" pin="A11" pad="38"/>
+<connect gate="G$1" pin="A12" pad="37"/>
+<connect gate="G$1" pin="A13" pad="36"/>
+<connect gate="G$1" pin="A14" pad="35"/>
+<connect gate="G$1" pin="A15" pad="34"/>
+<connect gate="G$1" pin="A16" pad="33"/>
+<connect gate="G$1" pin="A17" pad="2"/>
+<connect gate="G$1" pin="A18" pad="1"/>
+<connect gate="G$1" pin="A19" pad="42"/>
+<connect gate="G$1" pin="A2" pad="8"/>
+<connect gate="G$1" pin="A3" pad="7"/>
+<connect gate="G$1" pin="A4" pad="6"/>
+<connect gate="G$1" pin="A5" pad="5"/>
+<connect gate="G$1" pin="A6" pad="4"/>
+<connect gate="G$1" pin="A7" pad="3"/>
+<connect gate="G$1" pin="A8" pad="41"/>
+<connect gate="G$1" pin="A9" pad="40"/>
+<connect gate="G$1" pin="GND@1" pad="12"/>
+<connect gate="G$1" pin="GND@2" pad="31"/>
+<connect gate="G$1" pin="Q0" pad="14"/>
+<connect gate="G$1" pin="Q1" pad="16"/>
+<connect gate="G$1" pin="Q10" pad="19"/>
+<connect gate="G$1" pin="Q11" pad="21"/>
+<connect gate="G$1" pin="Q12" pad="24"/>
+<connect gate="G$1" pin="Q13" pad="26"/>
+<connect gate="G$1" pin="Q14" pad="28"/>
+<connect gate="G$1" pin="Q15" pad="30"/>
+<connect gate="G$1" pin="Q2" pad="18"/>
+<connect gate="G$1" pin="Q3" pad="20"/>
+<connect gate="G$1" pin="Q4" pad="23"/>
+<connect gate="G$1" pin="Q5" pad="25"/>
+<connect gate="G$1" pin="Q6" pad="27"/>
+<connect gate="G$1" pin="Q7" pad="29"/>
+<connect gate="G$1" pin="Q8" pad="15"/>
+<connect gate="G$1" pin="Q9" pad="17"/>
+<connect gate="G$1" pin="VCC" pad="22"/>
+<connect gate="G$1" pin="VPP" pad="32"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_ZIF42F" package="ZIF42F">
 <connects>
 <connect gate="G$1" pin="!CE" pad="11"/>
 <connect gate="G$1" pin="!OE" pad="13"/>
@@ -745,7 +955,7 @@
 <attribute name="WEBSITE" value="http://www.commodore.gen.tr"/>
 </part>
 <part name="IC1" library="sj_ic" deviceset="27C4096" device="_DIP" value="27C4096"/>
-<part name="IC2" library="sj_ic" deviceset="27C160" device="_DIP" value="27C400/800/160"/>
+<part name="IC2" library="sj_ic" deviceset="27C160" device="_ZIF42F" value="27C400/800/160"/>
 <part name="VCC1" library="sj_standart" deviceset="SUPPLY_VCC" device="" value="VCC"/>
 <part name="GND1" library="sj_standart" deviceset="SUPPLY_GND" device="" value="GND"/>
 <part name="VCC2" library="sj_standart" deviceset="SUPPLY_VCC" device="" value="VCC"/>
